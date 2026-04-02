@@ -5,7 +5,7 @@ import { Award, Users, Building, Handshake } from "lucide-react";
 
 const universityData = {
   name: "Dhanalakshmi Srinivasan University",
-  location: "Samayapuram, Tiruchirappalli & Perambalur, Tamil Nadu",
+  location: "Samayapuram, Tiruchirappalli, Chennai & Perambalur, Tamil Nadu",
   tagline: "Empowering Minds, Transforming Lives - Innovation and Excellence in Higher Education",
   heroImage: "https://www.dsuniversity.ac.in/slider/DSU-Pic-04.jpg",
   logoImage: "https://www.dsuniversity.ac.in/images/DSU_Logo.png",
