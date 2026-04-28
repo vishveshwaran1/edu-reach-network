@@ -537,6 +537,7 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
         credentials: "include",
         method: "POST",
       });
+      const enquirySubmitRes = await enquirySubmitReq.json();
       if (enquirySubmitReq.ok) {
         toast({
           title: "Application Submitted Successfully!",
@@ -553,6 +554,13 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
         });
         setIsContactOpen(false);
         setIsCourseDetailOpen(false);
+      } else {
+        toast({
+          title: "Application submission failed!",
+          description:
+            enquirySubmitRes.error ||
+            "Please try submitting the application again!",
+        });
       }
     } catch (error) {
       console.log("Error in sending enquiry");
@@ -579,6 +587,7 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
         credentials: "include",
         method: "POST",
       });
+      const enquirySubmitRes = await enquirySubmitReq.json();
       if (enquirySubmitReq.ok) {
         toast({
           title: "Enquiry Submitted Successfully!",
@@ -591,6 +600,13 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
           district: "",
           course: "",
           college: universityData.name,
+        });
+      } else {
+        toast({
+          title: "Application submission failed!",
+          description:
+            enquirySubmitRes.error ||
+            "Please try submitting the application again!",
         });
       }
     } catch (error) {
@@ -965,10 +981,14 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
                   </Select>
                 </div>
 
+                <span className="mt-6 text-xs font-semibold text-gray-600">
+                  By submitting this form, you agree let us use your information
+                  to possibly contact you about admissions.
+                </span>
                 <Button
                   type="submit"
                   disabled={isSaveDisabled}
-                  className="mt-6 w-full bg-gradient-to-r from-blue-600 to-purple-600 py-3 text-lg font-semibold text-white hover:from-blue-700 hover:to-purple-700"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 py-3 text-lg font-semibold text-white hover:from-blue-700 hover:to-purple-700"
                 >
                   Submit Enquiry
                 </Button>
