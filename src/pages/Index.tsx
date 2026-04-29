@@ -81,6 +81,16 @@ const universities = [
     heroImage:
       "https://takshashilauniv.ac.in/wp-content/uploads/2025/03/infrastructure-2.webp",
   },
+  {
+    name: "VelTech University",
+    path: "/veltech-university",
+    description: "Reviving India's ancient educational excellence",
+    color: "from-amber-600 to-amber-800",
+    image:
+      "https://www.veltech.edu.in/wp-content/uploads/2026/01/veltech-logo-.png",
+    heroImage:
+      "https://www.veltech.edu.in/wp-content/uploads/2025/08/Campus-2.jpg",
+  },
 ];
 
 const Index = () => {
@@ -301,7 +311,7 @@ const Index = () => {
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link
-                    to="/mgr-university"
+                    to="/admissions/mgr-university"
                     className="text-gray-300 transition-colors hover:text-white"
                   >
                     MGR University
@@ -309,7 +319,7 @@ const Index = () => {
                 </li>
                 <li>
                   <Link
-                    to="/dsu-university"
+                    to="/admissions/dsu-university"
                     className="text-gray-300 transition-colors hover:text-white"
                   >
                     DSU University
@@ -317,7 +327,7 @@ const Index = () => {
                 </li>
                 <li>
                   <Link
-                    to="/biher-university"
+                    to="/admissions/biher-university"
                     className="text-gray-300 transition-colors hover:text-white"
                   >
                     BIHER University
@@ -325,7 +335,7 @@ const Index = () => {
                 </li>
                 <li>
                   <Link
-                    to="/scsvmv-university"
+                    to="/admissions/scsvmv-university"
                     className="text-gray-300 transition-colors hover:text-white"
                   >
                     SCSVMV University
@@ -333,7 +343,7 @@ const Index = () => {
                 </li>
                 <li>
                   <Link
-                    to="/saveetha-university"
+                    to="/admissions/saveetha-university"
                     className="text-gray-300 transition-colors hover:text-white"
                   >
                     Saveetha University
@@ -341,10 +351,18 @@ const Index = () => {
                 </li>
                 <li>
                   <Link
-                    to="/takshashila-university"
+                    to="/admissions/takshashila-university"
                     className="text-gray-300 transition-colors hover:text-white"
                   >
                     Takshashila University
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/admissions/veltech-university"
+                    className="text-gray-300 transition-colors hover:text-white"
+                  >
+                    VelTech University
                   </Link>
                 </li>
               </ul>
